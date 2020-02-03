@@ -1,4 +1,4 @@
-import { FormattedMessage, defineMessages, useIntl, FormattedNumber } from 'react-intl'
+import { FormattedMessage, defineMessages, useIntl, FormattedNumber, FormattedRelativeTime } from 'react-intl'
 import Head from 'next/head'
 import Layout from '../components/Layout'
 
@@ -18,6 +18,9 @@ export default () => {
       </Head>
       <p>
         <FormattedMessage id="greeting" defaultMessage="Hello, World!" />
+      </p>
+      <p>
+        <FormattedRelativeTime value={0} numeric="auto" updateIntervalInSeconds={10} />
       </p>
       <p>
         {/**
